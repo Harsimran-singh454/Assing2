@@ -15,11 +15,16 @@ namespace Assing3.Controllers
         /// <summary>
         /// Recieves 4 inputs which are Id's for different items. In return, we will be able to see the total calories in the passed order
         /// </summary>
-        /// <param name="burger"></param>
-        /// <param name="drink"></param>
-        /// <param name="side"></param>
-        /// <param name="dessert"></param>
-        /// <returns></returns>
+        /// <param name="burger"> This parameter is of data type integer and its Choice of burger from range 1 to 4 </param>
+        /// <param name="drink"> This parameter is of data type integer and its Choice of drink from range 1 to 4 </param>
+        /// <param name="side"> This parameter is of data type integer and its Choice of side from range 1 to 4 </param>
+        /// <param name="dessert"> This parameter is of data type integer and its Choice of dessert from range 1 to 4 </param>
+
+        /// <returns>  The function Menu will return the total number of calories of the entered choices of items  
+        /// example1: GET ../api/J1/Menu/4/4/4/4  --> Your total calorie count is 0
+        /// example2: GET ../api/J1/Menu/1/2/3/4 --> Your total calorie count is 691
+        /// </returns>
+        /// 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/J1/Menu/{burger}/{drink}/{side}/{dessert}")]
         public string Menu(int burger, int drink, int side, int dessert)

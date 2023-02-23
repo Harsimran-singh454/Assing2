@@ -8,38 +8,23 @@ using System.Web.Http;
 namespace Assing3.Controllers
 {
 
+    /// <summary>
+    ///J3 from 2022
+    //<result>
+    // POST: ../api/J3/setHarp/AFB+8HC-4 --->AFB tighten 8 
+    //                                       HC Loosen 4
+    ///</result>
 
+
+    /// </summary>
     public class J3Controller : ApiController
     {
 
-        // J3 from 2022
-
-        // Input ---> AFB+8HC-4
-
-        /* Output ---> 
-         * AFB tighten 8 
-         * HC Loosen 4
-        */
-
-        [HttpGet]
+        [HttpPost]
         [Route("api/J3/setHarp/{inst}")]
         public string setHarp(string inst)
         {
-
-/*       This code below was working in the microsoft online.NET editor,
-*       execpt I could not get the number to print
-        
-        So the actual results from my code were
-
-        Input ---> AFB+8HC-4
-        
-         Output ---> 
-         AFB tighten 
-         HC Loosen
-        
-*/
-
-            char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
   
             string[] splits = inst.Split(nums);
 
@@ -65,25 +50,22 @@ namespace Assing3.Controllers
         }
 
 
-/*     
- *     
- *     --------------This is the actual code that i wrote in the online compiler--------------
- *  
- * 
-    string inst = "AFBF+4BDF-5";
-    char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-    string[] splits = inst.Split(nums);
-    string ae = "";
-    foreach(var str in splits)
-    {
-        ae += str;
-        ae += "\n"; 
-    }
-    string output1 = ae.Replace("+", " tighten ");
-    string output2 = output1.Replace("-", " loosen ");
-    System.Console.WriteLine(output2);
+/// <summary>
+/// 
+//    char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+//  string[] splits = inst.Split(nums);
+//  string ae = "";
+//    foreach(var str in splits)
+//    {
+//        ae += str;
+//        ae += "\n"; 
+//    }
+//    string output1 = ae.Replace("+", " tighten ");
+//    string output2 = output1.Replace("-", " loosen ");
+//    System.Console.WriteLine(output2);
 
-*/
+/// </summary>
+
 
     }
 }
