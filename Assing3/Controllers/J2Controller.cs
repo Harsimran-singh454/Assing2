@@ -14,12 +14,11 @@ namespace Assing3.Controllers
     /// <param name="d1">the d1 paramenter represents the maximum number on the dice 1. It is of int data type</param>
     /// <param name="d2">the d2 paramenter represents the maximum number on the dice 2. It is of int data type</param>
     /// 
-    /// <returns> The output will of this method will be a string containing a number 
-    /// example1: GET ../api/J2/DiceGame/6/8  --> There are 5 ways to get the sum 10
-    /// example2: GET ../api/J2/DiceGame/12/4 --> There are 4 ways to get the sum of 10
-    /// example3: GET ../api/J2/DiceGame/3/3 --> There are 0 ways to get the sum 10
+    /// <returns> The output will of this method will be a string containing a number  </returns>
+    /// <example> GET ../api/J2/DiceGame/6/8  --> There are 5 ways to get the sum 10 </example>
+    /// <example> GET ../api/J2/DiceGame/12/4 --> There are 4 ways to get the sum of 10 </example>
+    /// <example> GET ../api/J2/DiceGame/3/3 --> There are 0 ways to get the sum 10 </example>
     /// 
-    /// </returns>
     ///
     public class J2Controller : ApiController
     {

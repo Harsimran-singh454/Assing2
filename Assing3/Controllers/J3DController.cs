@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Assing3.Controllers
 {
-
-    ///J3 from 2022
-    /// <summary></summary>
-    ///<example> ../api/J3/setHarp/AFB+8HC-4 --->AFB tighten 8, HC Loosen 4 </example>
-    ///<result></result>
-    /// </summary>
-    
-    public class J3Controller : ApiController
+    public class J3DController : Controller
     {
+        // GET: J3D
+        public ActionResult takeInstruction()
+        {
+            return View();
+        }
 
         [HttpPost]
-        [Route("api/J3/setHarp/{inst}")]
-        public string setHarp(string inst)
+        public ActionResult giveInstruction(string inst)
         {
+            ViewBag.inst = inst;
             char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             string[] splits = inst.Split(nums);
             string ae = "";
@@ -31,8 +28,8 @@ namespace Assing3.Controllers
             }
             string output1 = ae.Replace("+", " tighten ");
             string output2 = output1.Replace("-", " loosen ");
-            return output2;
-            ///System.Console.WriteLine(output2);
+            ViewBag.output = output2;
+            return View();
         }
     }
 }
