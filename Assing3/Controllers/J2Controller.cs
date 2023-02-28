@@ -18,12 +18,14 @@ namespace Assing3.Controllers
     /// <example> GET ../api/J2/DiceGame/6/8  --> There are 5 ways to get the sum 10 </example>
     /// <example> GET ../api/J2/DiceGame/12/4 --> There are 4 ways to get the sum of 10 </example>
     /// <example> GET ../api/J2/DiceGame/3/3 --> There are 0 ways to get the sum 10 </example>
-    /// 
-    ///
+     
+    
     public class J2Controller : ApiController
     {
         [HttpGet]
         [Route("api/J2/DiceGame/{d1}/{d2}")]
+
+        // GET: ../api/J2/DiceGame/{d1}/{d2}
         public string DiceGame(int d1, int d2)
         {
             int count = 0;

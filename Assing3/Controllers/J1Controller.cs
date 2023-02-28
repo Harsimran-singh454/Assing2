@@ -25,16 +25,22 @@ namespace Assing3.Controllers
 
         /// <returns>  The function Menu will return the total number of calories of the entered choices of items  
         /// </returns>
-        /// 
+        
+
+
+        /// GET: ../api/J1/Menu/{burger}/{drink]/{side}/{dessert}
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/J1/Menu/{burger}/{drink}/{side}/{dessert}")]
         public string Menu(int burger, int drink, int side, int dessert)
         {
+
+            // Create a list to store order Items
             List<string> Order = new List<string>();
      
+            // 
             List<int> totalCalolries = new List<int>();
 
-            // Burgers
+            // Create a list to add calories of each selected item
 
             int cheeseburger = 461;
             int fish_burger = 431;
@@ -156,8 +162,11 @@ namespace Assing3.Controllers
                     break;
             }
 
+            // we will add and store the sum of all totalCalories list items in this variable
             int caloriCount = 0;
 
+
+            // looping through our list to add items one by one and get the total calorie count
             foreach (var items in totalCalolries)
             {
                 caloriCount = caloriCount + items;

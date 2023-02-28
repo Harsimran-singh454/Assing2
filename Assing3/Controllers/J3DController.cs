@@ -20,15 +20,16 @@ namespace Assing3.Controllers
             ViewBag.inst = inst;
             char[] nums = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             string[] splits = inst.Split(nums);
-            string ae = "";
+            string SplittedInstruction = "";
             foreach (var str in splits)
             {
-                ae += str;
-                ae += "\n";
+                SplittedInstruction += str;
+                SplittedInstruction += "\n";
             }
-            string output1 = ae.Replace("+", " tighten ");
+            string output1 = SplittedInstruction.Replace("+", " tighten ");
             string output2 = output1.Replace("-", " loosen ");
             ViewBag.output = output2;
+            
             return View();
         }
     }
